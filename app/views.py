@@ -24,14 +24,16 @@ def store(request):
 class CategoryView(View):
     def get(self,request,val):
         product = Product.objects.filter(category = val)
-        title = Product.objects.filter(category=val).values('title')
+        title = Product.objects.filter(category=val).values('title').annotate(total=Count('title'))
         return render(request,"store/category.html",locals())
+    
+
     
 class ProductDetail(View):
     def get(self,request,pk):
         product = Product.objects.get(pk = pk)
         return render(request, "store/productdetail.html",locals())
-
+ 
 def about(request):
     contex = {}
     return render(request,'store/about.html', contex)

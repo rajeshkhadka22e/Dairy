@@ -1,0 +1,54 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %} 
+    about 
+{% endblock %}
+
+
+{% block  content%}
+{% include "store/include.html" %}
+<div class="container mt-3">
+    <br>
+    <div class="row container">
+        <h2 class="text-center">
+            About us 
+            
+        </h2>
+        <br>
+        <p class="fs-4 text-center">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit corrupti possimus repellendus earum voluptate, nobis omnis obcaecati corporis vero sit at, reiciendis, illo quas natus mollitia molestias! Enim, aliquid officia?
+
+        </p>
+    </div>
+    <br>
+    <br>
+    <h2 class="text-center">
+        Mission
+    </h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center">to make the eembrance the right technology to delight our customer Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum in aspernatur, deleniti officia error corporis dolore fugiat similique neque quia atque cupiditate reprehenderit illum tenetur iusto, facilis ex vitae amet.</p>
+    </div>
+</div>
+
+{% endblock  %}
+{% block informaton %}
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock  %}
